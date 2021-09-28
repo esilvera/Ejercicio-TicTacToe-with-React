@@ -1,12 +1,7 @@
 import React, { useState } from "react";
 
-const Form = () => {
-	const [player1, setPlayer1] = useState("");
-	const [player2, setPlayer2] = useState("");
-	const [play, setPlay] = useState("");
-
-	const jugar = () => {};
-
+//const Form = ({ setPlayer1, setPlayer2, setPlay }) => {
+const Form = props => {
 	return (
 		<>
 			<div className="container-fluid">
@@ -23,7 +18,7 @@ const Form = () => {
 								className="form-control"
 								placeholder="Jugador 01"
 								onChange={evento =>
-									setPlayer1(evento.target.value)
+									props.setPlayer1(evento.target.value)
 								}
 							/>
 						</div>
@@ -33,7 +28,7 @@ const Form = () => {
 								className="form-control"
 								placeholder="Jugador 02"
 								onChange={evento =>
-									setPlayer2(evento.target.value)
+									props.setPlayer2(evento.target.value)
 								}
 							/>
 						</div>
@@ -44,20 +39,18 @@ const Form = () => {
 						<div className="col-md-6">
 							<button
 								onClick={() => {
-									setPlay("X");
-									jugar();
+									props.setPlay("X");
 								}}
-								className="btn btn-light">
+								className="btn btn-primary">
 								X
 							</button>
 						</div>
 						<div className="col-md-6">
 							<button
 								onClick={() => {
-									setPlay("0");
-									jugar();
+									props.setPlay("0");
 								}}
-								className="btn btn-light">
+								className="btn btn-primary">
 								0
 							</button>
 						</div>
