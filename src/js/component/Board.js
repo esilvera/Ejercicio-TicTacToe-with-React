@@ -12,8 +12,6 @@ const Board = ({
 	winner,
 	reset
 }) => {
-	console.log("Winnroplay tiene: " + winNroPlay);
-	console.log("Winner tiene: " + winner);
 	return (
 		<>
 			<div className="row">
@@ -30,10 +28,14 @@ const Board = ({
 							) : (
 								<h3>"The Winner is " {player2}</h3>
 							)
-						) : play == "X" ? (
-							<h4>It's Turn {player1}</h4>
+						) : winNroPlay !== 9 ? (
+							play == "X" ? (
+								<h4>It's Turn {player1}</h4>
+							) : (
+								<h4>It's Turn {player2}</h4>
+							)
 						) : (
-							<h4>It's Turn {player2}</h4>
+							<h3>"No One Winner"</h3>
 						)
 					) : (
 						<h3>"No One Winner"</h3>
