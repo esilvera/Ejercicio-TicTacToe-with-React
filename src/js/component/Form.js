@@ -17,8 +17,10 @@ const Form = props => {
 								type="text"
 								className="form-control"
 								placeholder="Jugador 01"
-								onChange={evento =>
-									props.setPlayer1(evento.target.value)
+								onChange={
+									evento =>
+										props.setPlayer1(evento.target.value)
+									//setPlayer1(evento.target.value)
 								}
 							/>
 						</div>
@@ -27,8 +29,10 @@ const Form = props => {
 								type="text"
 								className="form-control"
 								placeholder="Jugador 02"
-								onChange={evento =>
-									props.setPlayer2(evento.target.value)
+								onChange={
+									evento =>
+										props.setPlayer2(evento.target.value)
+									//setPlayer2(evento.target.value)
 								}
 							/>
 						</div>
@@ -40,6 +44,7 @@ const Form = props => {
 							<button
 								onClick={() => {
 									props.setPlay("X");
+									//setPlay("X");
 								}}
 								className="btn btn-primary">
 								X
@@ -49,6 +54,7 @@ const Form = props => {
 							<button
 								onClick={() => {
 									props.setPlay("0");
+									//setPlay("0");
 								}}
 								className="btn btn-primary">
 								0

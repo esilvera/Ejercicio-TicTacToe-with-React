@@ -46,7 +46,8 @@ module.exports = {
     ]
   },
   resolve: {
-    extensions: ['*', '.js']
+    extensions: ['.js', '.json', '.ts', '.tsx'],
+    mainFields: ['browser', 'main', 'module']
   },
   devtool: "source-map",
   devServer: {
